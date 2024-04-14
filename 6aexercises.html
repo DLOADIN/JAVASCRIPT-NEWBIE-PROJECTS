@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXERCISES</title>
+</head>
+<body>
+  <button onclick="Hours()">Morning</button>
+  <button onclick="Hours()">AfterNoon</button>
+  <button onclick="Hours()">Night</button>
+
+ <script>
+
+    function Hours(){
+    let hour = Math.random();
+    const name = 'David';
+    if(hour >= 6 && hour <= 12){
+      //hour = 'Good Morning';
+      console.log(`Good Morning ${name}`);
+    }
+    else if(hour >= 13 && hour  <=17){
+      //hour = 'Good AfterNoon';
+      console.log(`Good AfterNoon ${name}`);
+    }
+    else{
+      console.log(`Good Night ${name}`);
+    }
+  }
+  </script>
+</body>
+</html>

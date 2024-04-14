@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+<style>
+  
+  #button1{
+        color: black;
+        background-color: yellow;
+      }
+
+      #button2{
+        color: black;
+        background-color: orange;
+      }
+
+</style>
+</head>
+<body>
+  <p>
+    <h3>Adult Plain Cotton T-Shirt</h3>
+    <h3>Price: $7.99</h3>
+    <p>
+      <button id="button1" onclick="alert('Added');">
+        Add to Cart</button>  <button id="button2" onclick="alert('Purchased')">
+        Buy Now</button>
+    </p>
+  </p><br>
+  <button onclick="
+  cartNumber = cartNumber + 4;
+  console.log(`The Cart Quantity is:$${cartNumber}`)">
+    +4
+  </button>
+
+  <button onclick="
+  cartNumber = cartNumber + 5;
+  console.log(`The CartQuantity is:$${cartNumber}`)">
+    +5
+  </button>
+
+  <button onclick="
+  cartNumber -= 1;
+  console.log(`The CartQuantity is:$${cartNumber}`)">
+    Remove From Cart
+  </button>
+
+  <button onclick="
+  cartNumber -= 2;
+  console.log(`The CartQuantity is:$${cartNumber}`)">
+    -2
+  </button>
+
+  <button onclick="
+  cartNumber-= 3;
+  console.log(`The CartQuantity is:$${cartNumber}`)">
+    -3
+  </button>
+
+  <script>
+    let cartNumber = 0;
+    const name='David';
+    console.log(`My name is ${name}`);
+
+    const coffee=5;
+    const bagel=1.5;
+    const soup=9;
+
+    let cost = coffee + bagel + bagel + soup;
+    console.log(`The Cost of the food:$${cost}`);
+
+    let tax = cost * 10/100;
+    console.log(`Tax(10%):$${tax}`);
+
+    let totalCost= cost + tax;
+    console.log(`The Total Cost:$${totalCost}`);
+      </script>
+</body>
+</html>

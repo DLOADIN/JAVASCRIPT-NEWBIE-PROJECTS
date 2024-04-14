@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM PROJECT</title>
+  <style>
+      .js-subscribe-button{
+        border: 0px;
+        color:whitesmoke;
+        background-color: black;
+        border-radius:50px ;
+        cursor: pointer;
+        height: 40px;
+        font-weight: bold;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      body{
+        font-family: Arial;
+
+      }
+
+    .is-subscribed{
+        color: black;
+        background-color: rgb(240,240,240);
+      }
+    .cost-input{
+      width: 23%;
+      padding-left: 9px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+    .calculate-button{
+      background-color: green;
+      color:antiquewhite;
+      font-size: 15px;
+      border: none;
+      padding: 10px 14px 10px 14px;
+      cursor:pointer;
+
+    }
+  </style>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button onclick="subscribeButton()" class="js-subscribe-button" >Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of Order" 
+         class="js-cost-order cost-input" 
+         onkeydown="EnterKey(event)">
+  <button onclick="calculateAmount()" class="calculate-button">Calculate</button>
+  <p class="js-total-cost"></p>
+
+
+  <script>
+    String(25);
+    console.log('25'- 5);
+    console.log('25' + 5);//Never use Strings doing mathematical operations.
+
+    window.document;
+    window.console.log('window');
+
+    function EnterKey(event){
+      if(event.key === 'Enter'){
+         calculateAmount();
+         }
+    }
+    function calculateAmount(){
+      const inputElement = document.querySelector('.js-cost-order');
+      var Cost = Number(inputElement.value);
+
+      if(Cost < 40){
+        Cost = Cost + 10
+        console.log(Cost);
+      }
+      document.querySelector('.js-total-cost').innerHTML = `FRW ${Cost}`;
+    }
+    function subscribeButton(){
+      const subscribeButton = document.querySelector('.js-subscribe-button');
+
+      if(subscribeButton.innerHTML === 'Subscribe'){
+      subscribeButton.innerHTML = 'Subscribed';
+      subscribeButton.classList.add('is-subscribed')
+      }else{
+      subscribeButton.innerHTML = 'Subscribe';
+      subscribeButton.classList.remove('is-subscribed');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <p>
+    <button onclick="Calculation+= 1;
+  console.log(`The Calculation is ${Calculation}`);">1</button>
+
+  <button onclick="Calculation+= 2;
+  console.log(`The Calculation is ${Calculation}`);">2</button>
+  </p>
+
+  <p>
+   <button onclick="Calculation+= 3;
+  console.log(`The Calculation is ${Calculation}`);">3</button>
+
+  <button>+</button>
+  <button onclick="eval(Calculation); console.log(` ${Calculation}`);">=</button> 
+  </p>
+  <script>
+    let Calculation = "";
+  </script>
+</body>
+</html>

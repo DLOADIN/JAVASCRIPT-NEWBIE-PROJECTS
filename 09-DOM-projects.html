@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM PROJECT</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button onclick="subscribeButton()" class="js-subscribe-button" >Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of Order" 
+         class="js-cost-order" 
+         onkeydown="EnterKey(event)">
+  <button onclick="calculateAmount()">Calculate</button>
+  <p class="js-total-cost"></p>
+
+
+  <script>
+    String(25);
+    console.log('25'- 5);
+    console.log('25' + 5);//Never use Strings doing mathematical operations.
+
+    window.document;
+    window.console.log('window');
+
+    function EnterKey(event){
+      if(event.key === 'Enter'){
+         calculateAmount();
+         }
+    }
+    function calculateAmount(){
+      const inputElement = document.querySelector('.js-cost-order');
+      var Cost = Number(inputElement.value);
+
+      if(Cost < 40){
+        Cost = Cost + 10
+        console.log(Cost);
+      }
+      document.querySelector('.js-total-cost').innerHTML = `FRW ${Cost}`;
+    }
+    function subscribeButton(){
+      const subscribeButton = document.querySelector('.js-subscribe-button');
+
+      if(subscribeButton.innerHTML === 'Subscribe'){
+      subscribeButton.innerHTML = 'Subscribed';
+      }else{
+      subscribeButton.innerHTML = 'Subscribe';
+      }
+    }
+  </script>
+</body>
+</html>

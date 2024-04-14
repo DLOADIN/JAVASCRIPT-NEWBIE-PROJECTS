@@ -1,0 +1,45 @@
+body{
+  font-family: Arial;
+}
+
+
+.names-input,
+.dates-input{
+font-size: 15px;
+padding: 6px;
+}
+
+.dates-input{
+
+}
+
+.delete-to-do{
+  background-color: red;
+  border:none;
+  color:white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.add-to-do{
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  font-size:15px;
+  align-items: center;
+  color: white;
+}
+
+.todoinputgrid,
+.todogrid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 15px;
+  row-gap: 15px;
+  align-items: center;
+}
+
+.todoinputgrid{
+  margin-bottom: 10px;
+  align-items: stretch;
+}
